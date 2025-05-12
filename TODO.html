@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="STYLE.css">
+</head>
+<body>
+  <header>
+    <h1>To Do List App</h1>
+  </header>
+  <hr>
+  <div>
+    <div id="writable">
+    <input type="text" id="textbox" placeholder="Enter task!" >
+    <button onclick="submiting()" id="submit" >Submit</button>
+    </div>
+    <div id="tasks"><h2><u>Your tasks:</u></h2></div>
+  </div>
+  <section id="parent">
+    
+  </section>
+
+  <footer>
+    Developed by Subhankar
+  </footer>
+
+  <script>
+    let count = 1
+    function deleting(para){
+      console.log("Deleting function running!")
+      ids = document.querySelector("#"+para)
+      document.querySelector("#parent").removeChild(ids)
+    }
+
+    function submiting(){
+      let newelement = document.createElement("div")
+      let currentid= "task-"+count
+      let classNaming = "tasks"
+      let classNamingInside = "tasksinside"
+      newelement.setAttribute("id",currentid)
+      
+      let content = document.querySelector("input")
+      
+      newelement.innerHTML= `<div class= ${classNaming}> ${count} . <h4 class=${classNamingInside} >${content.value}</h4> </div><button onclick="deleting('${currentid}')">Delete</button><br><br><br>`
+      document.querySelector("section").appendChild(newelement)  
+      count = count + 1
+      content.value="";
+    }
+    
+    
+
+  </script>
+</body>
+</html>

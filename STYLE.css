@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cfcfcf;
+  margin: 0;
+  padding: 10px;
+  color: #606060;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+}
+
+#writable {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#textbox {
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+}
+
+#submit {
+  background-color: #fbc9c9;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#submit:hover {
+  background-color: #f79999;
+}
+
+#tasks h2 {
+  text-align: center;
+  color: #444;
+}
+
+#parent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff7f7;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.tasks:hover {
+  transform: translateY(-2px);
+  
+}
+
+.tasksinside {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  flex-grow: 1;
+  color: #222;
+}
+
+button {
+  background-color: #ffaaaa;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff7b7b;
+}
+
+footer{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 10px;
+    
+}
